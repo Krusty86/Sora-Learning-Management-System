@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainContent" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #F8FAFC;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminInstructorController">
+   
+   <left>
+      <VBox prefWidth="200.0" style="-fx-background-color: #55C2EE;" stylesheets="@../application/application.css">
+         <children>
+            <VBox prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: #4FBBE3;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="160.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Icons/graduation-hat_1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="200.0" text="SoraLMS" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="34.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/navs/apps.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_home1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleHome" prefHeight="70.0" prefWidth="90.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/online-learning%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_course1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleCourse" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/reading-book_1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_student1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleStudent" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Students" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="active-nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/teacher%20(2).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_instructor1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_instructor" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Instructors" textFill="#4fbbe3">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/desktop.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_account1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_account" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent; -fx-scale-x: 1.1; -fx-scale-y: 1.1;" text="Accounts" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/score.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_grade1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_grade" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Grades" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="422.0" prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/schedule.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_shedule1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_schedule" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Schedule" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="100.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Icons/navs/logout1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="btn_logOut" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="120.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+
+   <center>
+      <VBox spacing="25.0" stylesheets="@../application/test.css">
+         <padding><Insets bottom="30" left="40" right="40" top="30" /></padding>
+         <children>
+            <VBox spacing="5">
+               <children>
+                  <Label style="-fx-font-size: 12;" text="Admin / Manage Instructors" textFill="#64748B" />
+                  <Label style="-fx-font-size: 26; -fx-font-weight: bold;" text="Instructor Management" textFill="#0F172A" />
+               </children>
+            </VBox>
+
+            <HBox maxWidth="360" spacing="10" style="-fx-background-color: #E2E8F0; -fx-background-radius: 10; -fx-padding: 5;">
+               <children>
+                  <Button fx:id="viewAllInstructors" onAction="#handleViewAll" prefWidth="175" styleClass="tab-btn-active" text="View All Instructors" />
+                  <Button fx:id="assignCourse" onAction="#handleAssign" prefWidth="175" styleClass="tab-btn" text="Assign Courses" />
+               </children>
+            </HBox>
+
+            <StackPane VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="anc_viewAll" spacing="20">
+                     <children>
+                        <VBox spacing="15" styleClass="form-card">
+                           <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+                           <children>
+                              <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Instructor Detail" textFill="#20a7db" />
+                              <GridPane hgap="20" vgap="15">
+                                 <children>
+                                    <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                       <Label style="-fx-font-weight: bold;" text="Full Name" />
+                                       <TextField fx:id="txt_name" promptText="Enter name" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                       <Label style="-fx-font-weight: bold;" text="Email" />
+                                       <TextField fx:id="txt_email" promptText="email@example.com" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                                       <Label style="-fx-font-weight: bold;" text="Phone" />
+                                       <TextField fx:id="txt_phone" promptText="09-..." />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                       <Label style="-fx-font-weight: bold;" text="NRC" />
+                                       <TextField fx:id="txt_nrc" promptText="NRC Number" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <Label style="-fx-font-weight: bold;" text="DOB" />
+                                       <TextField fx:id="txt_dob" promptText="Date of Birth" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                       <Label style="-fx-font-weight: bold;" text="Address" />
+                                       <TextField fx:id="txt_address" promptText="Home Address" />
+                                    </VBox>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                 </rowConstraints>
+                              </GridPane>
+                              <HBox alignment="CENTER_RIGHT" spacing="10">
+                                 <TextField fx:id="txt_search" prefWidth="250" promptText="Search name..." />
+                                 <Button fx:id="btn_search" onAction="#handleSearch" styleClass="btn-search" text="Search" />
+                                 <Button fx:id="btn_create" onAction="#handleCreate" styleClass="btn-create" text="Create" />
+                                 <Button fx:id="btn_update" onAction="#handleUpdate" styleClass="btn-update" text="Update" />
+                                 <Button fx:id="btn_delete" onAction="#handleDelete" styleClass="btn-delete" text="Delete" />
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <TableView fx:id="tbl_instructor" onMouseClicked="#showData" styleClass="modern-table" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="col_count" prefWidth="50" text="No" />
+                              <TableColumn fx:id="col_name" prefWidth="200" text="Name" />
+                              <TableColumn fx:id="col_email" prefWidth="200" text="Email" />
+                              <TableColumn fx:id="col_phone" prefWidth="150" text="Phone" />
+                              <TableColumn fx:id="col_dob" prefWidth="120" text="DoB" />
+                           </columns>
+                           <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY" /></columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+
+                  <VBox fx:id="anc_assign" spacing="20" visible="false">
+                     <children>
+                        <VBox spacing="15" styleClass="form-card">
+                           <padding><Insets bottom="20" left="20" right="20" top="20" /></padding>
+                           <children>
+                              <Label style="-fx-font-size: 18; -fx-font-weight: bold;" text="Assign Course Detail" textFill="#20a7db" />
+                              <GridPane hgap="20" vgap="15">
+                                 <children>
+                                    <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                       <Label style="-fx-font-weight: bold;" text="Instructor" />
+                                       <ComboBox fx:id="cbl_name" maxWidth="Infinity" promptText="Select Instructor" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                       <Label style="-fx-font-weight: bold;" text="Course A" />
+                                       <ComboBox fx:id="cbl_courseA" maxWidth="Infinity" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                       <Label style="-fx-font-weight: bold;" text="Course B" />
+                                       <ComboBox fx:id="cbl_courseB" maxWidth="Infinity" />
+                                    </VBox>
+                                    <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <Label style="-fx-font-weight: bold;" text="Course C" />
+                                       <ComboBox fx:id="cbl_courseC" maxWidth="Infinity" />
+                                    </VBox>
+                                 </children>
+                                 <columnConstraints>
+                                    <ColumnConstraints />
+                                    <ColumnConstraints />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                 </rowConstraints>
+                              </GridPane>
+                              <HBox alignment="CENTER_RIGHT" spacing="10">
+                                 <Button fx:id="btn_create1" onAction="#handleCreateAssign" styleClass="btn-create" text="Create" />
+                                 <Button fx:id="btn_update1" onAction="#handleUpdateAssign" styleClass="btn-update" text="Update" />
+                                 <Button fx:id="btn_delete1" onAction="#handleDeleteAssign" styleClass="btn-delete" text="Delete" />
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <TableView fx:id="tbl_AssignCourse" onMouseClicked="#showDataAssign" styleClass="modern-table" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="col_count1" prefWidth="50" text="No" />
+                              <TableColumn fx:id="col_instName" prefWidth="200" text="Instructor" />
+                              <TableColumn fx:id="col_course1" prefWidth="180" text="Course A" />
+                              <TableColumn fx:id="col_course2" prefWidth="180" text="Course B" />
+                              <TableColumn fx:id="col_course3" prefWidth="180" text="Course C" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

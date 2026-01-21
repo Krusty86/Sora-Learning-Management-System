@@ -1,0 +1,131 @@
+/* Color Palette (Converted from OKLCH) */
+.root {
+    -fx-primary: #3b82f6;
+    -fx-primary-dark: #2563eb;
+    -fx-bg: #f8fafc;
+    -fx-card-bg: #ffffff;
+    -fx-text-main: #0f172a;
+    -fx-text-muted: #64748b;
+    -fx-border: #e2e8f0;
+}
+
+.main-container {
+    -fx-background-color: -fx-bg;
+}
+
+/* Left Section Styles */
+.left-section {
+    -fx-background-color: derive(-fx-primary, 95%);
+    -fx-border-color: transparent -fx-border transparent transparent;
+    -fx-border-width: 1px;
+}
+
+.blur-circle-top { -fx-fill: rgba(59, 130, 246, 0.1); -fx-effect: gaussian(blur, 50, 0, 0, 0); }
+.blur-circle-bottom { -fx-fill: rgba(59, 130, 246, 0.05); -fx-effect: gaussian(blur, 80, 0, 0, 0); }
+
+.icon-container-primary {
+    -fx-background-color: -fx-primary;
+    -fx-background-radius: 12;
+    -fx-padding: 10;
+    -fx-text-fill: white;
+}
+
+.brand-title {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+.hero-text {
+    -fx-font-size: 42px;
+    -fx-font-weight: 800;
+    -fx-fill: -fx-text-main;
+}
+
+.hero-subtext {
+    -fx-font-size: 18px;
+    -fx-fill: -fx-text-muted;
+}
+
+.icon-badge {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 8;
+    -fx-padding: 8;
+}
+
+.icon-primary { -fx-icon-color: -fx-primary; }
+
+/* Right Section Styles */
+.right-section {
+    -fx-background-color: -fx-card-bg;
+}
+
+.h2 {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+.text-muted {
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-text-muted;
+}
+
+/* Form Elements */
+.input-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-main;
+}
+
+.login-input {
+    -fx-background-color: white;
+    -fx-border-color: -fx-border;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10 10 10 40; /* Left padding for icon */
+    -fx-font-size: 14px;
+}
+
+.login-input:focused {
+    -fx-border-color: -fx-primary;
+    -fx-effect: dropshadow(gaussian, rgba(59, 130, 246, 0.2), 5, 0, 0, 0);
+}
+
+.input-icon { -fx-icon-color: -fx-text-muted; }
+
+/* Buttons */
+.btn-primary {
+    -fx-background-color: -fx-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover { -fx-background-color: -fx-primary-dark; }
+
+.btn-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-primary;
+    -fx-font-weight: bold;
+    -fx-underline: false;
+}
+
+.btn-link-small {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 11px;
+}
+
+.btn-icon-inside {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-muted;
+}
+
+.copyright-text {
+    -fx-font-size: 11px;
+    -fx-text-fill: -fx-text-muted;
+}

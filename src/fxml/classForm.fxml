@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="237.0" prefWidth="660.0" spacing="20.0" stylesheets="@../application/styles.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminClassFormController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <HBox prefHeight="187.0" prefWidth="384.0" spacing="15.0">
+         <children>
+            <TableView fx:id="tbl_class" prefHeight="197.0" prefWidth="349.0">
+              <columns>
+                <TableColumn fx:id="col_class" prefWidth="85.60003280639648" text="Class" />
+                <TableColumn fx:id="col_major" prefWidth="179.19996643066406" text="Major" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <VBox>
+               <children>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Class Name" textFill="#0F172A">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="courseNameField" prefHeight="40.0" promptText="Enter Class Name" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 6; -fx-background-radius: 6;" />
+                        <Label fx:id="courseNameError" text="Course name must be at least 2 characters." textFill="#EF4444" visible="false">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox spacing="8.0">
+                     <children>
+                        <Label text="Major" textFill="#0F172A">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="majorComboBox" maxWidth="1.7976931348623157E308" prefHeight="40.0" promptText="Select a major" style="-fx-background-color: #F8FAFC; -fx-border-color: #E2E8F0; -fx-border-radius: 6; -fx-background-radius: 6;" />
+                        <Label fx:id="majorError" text="Please select a major." textFill="#EF4444" visible="false">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox spacing="10.0">
+                     <children>
+                        <Button fx:id="submitButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="40.0" style="-fx-background-color: #0F172A; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-cursor: hand;" text="Create Course" />
+                        <Button fx:id="deleteButton" managed="false" maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefHeight="40.0" style="-fx-background-color: transparent; -fx-text-fill: #EF4444; -fx-border-color: #EF4444; -fx-border-radius: 6; -fx-cursor: hand;" text="Delete Course" visible="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

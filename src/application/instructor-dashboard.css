@@ -1,0 +1,47 @@
+/* style.css */
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+}
+
+.card {
+    -fx-background-color: #262626;
+    -fx-border-color: #404040;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.table-view {
+    -fx-background-color: white;
+    -fx-table-cell-border-color: transparent;
+}
+/* Custom Soft Blue Colors for Charts */
+.default-color0.chart-bar { -fx-bar-fill: #3B82F6; } /* Blue bar */
+.default-color1.chart-bar { -fx-bar-fill: #10B981; } /* Green bar */
+
+/* Clean up table view */
+.table-view {
+    -fx-background-color: white;
+    -fx-selection-bar: #EFF6FF;
+}
+.table-view .column-header {
+    -fx-background-color: #F8FAFC;
+    -fx-text-fill: #64748B;
+    	-fx-padding: 10 0 10 0;
+	-fx-font-size: 18;
+}
+.table-row-cell .table-cell {
+    -fx-alignment: CENTER;
+}
+.table-row-cell{
+	-fx-padding: 10 0 10 0;
+	-fx-font-size: 18;
+	-fx-border-color: transparent;
+}
+/* Bar Colors */
+.default-color0.chart-bar { -fx-bar-fill: #3b82f6; } /* Blue */
+.default-color1.chart-bar { -fx-bar-fill: #10b981; } /* Emerald */
+
+/* Chart background transparency */
+.chart-content { -fx-background-color: transparent; }
+.chart-plot-background { -fx-background-color: transparent; }

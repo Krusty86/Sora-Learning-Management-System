@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AssignmentController">
+   <left>
+      <VBox prefHeight="623.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #62c1e5 0%, #62c1e5 60%, #ffffff 100%);" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="600.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/instructor/graduation-hat_1.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="74.0" prefWidth="200.0" style="-fx-background-color: #62c1e5;" text="Sora LMS" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="34.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="0.0" prefWidth="200.0" />
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/instructor/home.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_home" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleHome" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/instructor/stack-of-books.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="btn_course" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleCourse" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-border-color: black;">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/instructor/online-education.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_assignment" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleAssignment" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Assignments" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/instructor/score.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_Grade" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleGrade" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Grades" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/instructor/schedule.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_schedule" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleSchedule" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Schedule" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/instructor/teacher.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_instructorInfo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleInstructorInfo" prefHeight="50.0" prefWidth="154.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Instructor Info" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button fx:id="btn_logout" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="45.0" prefWidth="110.0" style="-fx-background-radius: 25;" styleClass="btn-update" stylesheets="@../application/test.css" text="Log out">
+               <VBox.margin>
+                  <Insets left="45.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #62c1e5;">
+               <children>
+                  <ImageView fitHeight="77.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/instructor/online-education.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="74.0" prefWidth="224.0" style="-fx-background-color: #62c1e5;" text="Assignments" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="34.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="476.0" prefWidth="698.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+               <children>
+                  <Separator prefHeight="6.0" prefWidth="700.0" style="-fx-background-color: black;" />
+                  <VBox prefHeight="450.0" prefWidth="698.0" style="-fx-background-color: white;" VBox.vgrow="ALWAYS">
+                     <children>
+                        <HBox prefHeight="70.0" prefWidth="698.0">
+                           <children>
+                              <Button fx:id="btn_assign" mnemonicParsing="false" onAction="#handleAssignList" style="-fx-background-color: orange; -fx-border-color: gray; -fx-border-width: 3; -fx-background-radius: 15; -fx-border-radius: 10;" text="Assignment List" textFill="#fffbf8">
+                                 <padding>
+                                    <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="SansSerif Bold" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="btn_submit" mnemonicParsing="false" onAction="#handleSubmittedStu" style="-fx-background-color: orange; -fx-border-color: gray; -fx-border-width: 3; -fx-background-radius: 15; -fx-border-radius: 10;" text="Submitted Students" textFill="#fffbf8">
+                                 <padding>
+                                    <Insets bottom="7.0" left="20.0" right="20.0" top="7.0" />
+                                 </padding>
+                                 <font>
+                                    <Font name="SansSerif Bold" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </HBox>
+                        <StackPane prefHeight="378.0" prefWidth="698.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <AnchorPane fx:id="anc_submitted" style="-fx-background-color: white;">
+                                 <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="17.0" prefWidth="698.0">
+                                             <children>
+                                                <ComboBox fx:id="cb_courses1" onAction="#handleCourseFilter" prefHeight="37.0" prefWidth="150.0" promptText="Course" style="-fx-background-color: #F1F5F9;">
+                                                   <HBox.margin>
+                                                      <Insets left="22.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <ComboBox fx:id="cb_assignmentTitle" onAction="#handeAssignmentFilter" prefHeight="37.0" prefWidth="150.0" promptText="Assignment Title" style="-fx-background-color: #F1F5F9;">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="10.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="15.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <TextField fx:id="txt_grade" promptText="Enter Grade" />
+                                                      <Button fx:id="btn_submit" mnemonicParsing="false" onAction="#handleGradeSubmit" style="-fx-background-color: #F1F5F9;" text="Submit" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets bottom="10.0" top="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <TableView fx:id="tbl_AssignmentList1" onMouseClicked="#showDataSubmitted" prefHeight="318.0" prefWidth="698.0" stylesheets="@../application/instructor-grade.css" VBox.vgrow="ALWAYS">
+                                             <columns>
+                                                <TableColumn id="title_col" fx:id="col_stuName" prefWidth="174.40001755952835" text="Student Name" />
+                                                <TableColumn fx:id="col_status" prefWidth="179.2000732421875" text="Grade" />
+                                                <TableColumn id="date_col" fx:id="col_dueDate" prefWidth="164.0" text="Due Date" />
+                                                <TableColumn id="sub_col" fx:id="col_submitDate" prefWidth="131.99995117187495" text="Submitted Date" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anc_assign" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="51.0" prefWidth="698.0">
+                                             <children>
+                                                <ComboBox fx:id="cb_course" onAction="#handleCourseFilterSubmit" prefHeight="37.0" prefWidth="150.0" promptText="courses" style="-fx-background-color: #F1F5F9;">
+                                                   <HBox.margin>
+                                                      <Insets left="22.0" />
+                                                   </HBox.margin>
+                                                </ComboBox>
+                                             </children>
+                                          </HBox>
+                                          <VBox prefHeight="330.0" prefWidth="698.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <TableView fx:id="tbl_AssignmentList" onMouseClicked="#showData" prefHeight="318.0" prefWidth="698.0" stylesheets="@../application/instructor-grade.css" VBox.vgrow="ALWAYS">
+                                                   <columns>
+                                                      <TableColumn id="title_col" fx:id="col_title" prefWidth="203.2000053524971" text="Assignment Title" />
+                                                      <TableColumn fx:id="col_des" prefWidth="190.4000244140625" text="Description" />
+                                                      <TableColumn id="date_col" fx:id="col_date" prefWidth="120.00006103515625" text="Due Date" />
+                                                      <TableColumn id="sub_col" fx:id="col_file" prefWidth="131.99995117187495" text="File" />
+                                                   </columns>
+                                                   <columnResizePolicy>
+                                                      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                   </columnResizePolicy>
+                                                </TableView>
+                                             </children>
+                                             <padding>
+                                                <Insets left="25.0" right="25.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <Separator prefHeight="18.0" prefWidth="698.0" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="110.0" prefWidth="674.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="100.0" prefWidth="267.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="77.0" text="Title">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="77.0" text="Description">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin></Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <TextField fx:id="txt_title" promptText="title">
+                                             <VBox.margin>
+                                                <Insets bottom="16.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="txt_des" layoutX="10.0" layoutY="10.0" promptText="Description">
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="267.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label prefHeight="33.0" prefWidth="77.0" text="Due_date">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <TextField fx:id="txt_dd" promptText="date">
+                                             <VBox.margin>
+                                                <Insets bottom="16.0" />
+                                             </VBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="267.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="77.0" text="Course" />
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ComboBox fx:id="cb_courses" prefWidth="150.0" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="btn_create" mnemonicParsing="false" onAction="#handleCreate" prefHeight="33.0" prefWidth="138.0" style="-fx-background-radius: 25; -fx-background-color: #62c1e5;" text="+ Create " textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="btn_update" alignment="CENTER" mnemonicParsing="false" onAction="#handleUpdate" prefHeight="33.0" prefWidth="138.0" style="-fx-background-radius: 25; -fx-background-color: #62c1e5;" text="Update" textFill="#fff7f7">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Button fx:id="btn_delete" alignment="CENTER" mnemonicParsing="false" onAction="#handleDelete" prefHeight="33.0" prefWidth="138.0" style="-fx-background-radius: 25; -fx-background-color: #62c1e5;" text="Delete" textFill="#fff7f7">
+                                 <VBox.margin>
+                                    <Insets left="5.0" />
+                                 </VBox.margin></Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

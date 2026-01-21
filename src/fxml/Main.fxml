@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<VBox prefWidth="800.0" spacing="0" xmlns="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+    <stylesheets>
+        <URL value="@style.css" />
+    </stylesheets>
+
+    <HBox styleClass="header, bg-primary" spacing="10">
+        <Label text="Instructor" styleClass="col, text-white" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Label text="Contact" styleClass="col, text-white" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Label text="Address" styleClass="col, text-white" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+        <Label text="Actions" styleClass="col, text-white" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+    </HBox>
+
+    <VBox fx:id="rowsContainer" styleClass="container" />
+</VBox>

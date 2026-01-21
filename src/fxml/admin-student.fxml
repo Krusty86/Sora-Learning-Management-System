@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainContent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminStudentController">
+   <left>
+      <VBox prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #62c1e5 0%, #62c1e5 60%, #ffffff 100%);" stylesheets="@../application/application.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: #4FBBE3;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="160.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Icons/graduation-hat_1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="200.0" text="SoraLMS" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="34.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/navs/apps.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_home1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleHome" prefHeight="70.0" prefWidth="90.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/online-learning%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_course1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleCourse" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="active-nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/reading-book_1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_student1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleStudent" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Students" textFill="#4fbbe3">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/teacher%20(2).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_instructor1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_instructor" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Instructors" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/desktop.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_account1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_account" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent; -fx-scale-x: 1.1; -fx-scale-y: 1.1;" text="Accounts" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/score.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_grade1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_grade" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Grades" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="422.0" prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/schedule.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_shedule1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_schedule" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Schedule" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="20.0" layoutY="472.0" prefHeight="50.0" prefWidth="100.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/navs/logout1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_logOut" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="120.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" stylesheets="@../application/test.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="750.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="700.0" text="Student Management" textAlignment="CENTER" textFill="#2c7a9b">
+                     <font>
+                        <Font name="SansSerif Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="20.0" prefWidth="200.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding></Separator>
+                  <HBox prefHeight="0.0" prefWidth="700.0">
+                     <children>
+                        <Label prefHeight="30.0" text="/Manage Students" textFill="#8e8e8e">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <StackPane prefHeight="650.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" StackPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="TOP_CENTER" maxWidth="320.0" style="-fx-background-color: #E2E8F0; -fx-background-radius: 10; -fx-padding: 5;">
+                                 <children>
+                                    <Button fx:id="btn_viewAll" mnemonicParsing="false" onAction="#handleViewAll" styleClass="tab-btn-active" text="View All Students" textAlignment="CENTER" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="SansSerif Bold" size="14.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button fx:id="btn_stuEnroll" mnemonicParsing="false" onAction="#handleEnroll" styleClass="tab-btn" text="View Enrolled Student" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="SansSerif Bold" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <StackPane fx:id="content" alignment="TOP_LEFT" prefHeight="650.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <fx:include source="admin-student-1.fxml" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" top="15.0" />
+                                 </padding>
+                              </StackPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

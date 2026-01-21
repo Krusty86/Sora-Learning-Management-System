@@ -1,0 +1,168 @@
+/* Variables & Base */
+.root {
+    -fx-background: #ffffff;
+    -fx-primary-color: #18181b;
+    -fx-border-color: #e2e8f0;
+    -fx-text-muted: #71717a;
+    -fx-blue-accent: #2563eb;
+}
+
+.main-container {
+    -fx-background-color: white;
+}
+
+/* Typography */
+.h1 {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #09090b;
+}
+
+.text-muted {
+    -fx-text-fill: #71717a;
+    -fx-font-size: 14px;
+}
+
+.breadcrumb {
+    -fx-font-size: 13px;
+    -fx-text-fill: #71717a;
+}
+
+.breadcrumb-active {
+    -fx-text-fill: #09090b;
+    -fx-font-weight: bold;
+}
+
+/* Cards */
+.stat-card {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 24px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 1);
+}
+
+.stat-label {
+    -fx-text-fill: #71717a;
+    -fx-font-size: 14px;
+}
+
+.stat-value {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.icon-container-blue {
+    -fx-background-color: #eff6ff;
+    -fx-padding: 10px;
+    -fx-background-radius: 8px;
+}
+
+/* Buttons */
+.btn-primary {
+    -fx-background-color: #18181b;
+    -fx-text-fill: white;
+    -fx-padding: 8 16;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.btn-outline {
+    -fx-background-color: white;
+    -fx-border-color:  #E2E8F0;
+    -fx-text-fill: #09090b;
+    -fx-padding: 8 16;
+	-fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+	
+}
+
+/* Form Controls */
+.search-input {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-padding: 8 12;
+}
+
+/* Table styling */
+.course-table {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 8px;
+}
+
+.course-table .column-header {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+}
+
+.table .column-header .label{
+	-fx-text-fill: white;
+	-fx-padding: 5 0 5 0;
+	-fx-font-size: 16;
+}
+/* Zebra Striping: Style every even row */
+.table-row-cell:odd {
+    -fx-background-color: #f2f2f2;
+}
+
+/* Style the row when the mouse hovers over it */
+.table-row-cell:hover {
+    -fx-background-color: #e1f5fe;
+}
+
+/* Style the currently selected row(s) */
+.table-row-cell:selected {
+    -fx-background-color: #0078d7;
+    -fx-text-background-color: white;
+}
+.table-row-cell{
+	-fx-padding: 5 0 5 0;
+	-fx-font-size: 13;
+}
+
+/*For Dynamic Rows */
+.bg-primary { -fx-background-color: #0d6efd; }
+.bg-light { -fx-background-color: #f8f9fa; }
+.text-white { -fx-text-fill: white; }
+
+
+.icon-placeholder-blue {
+    -fx-background-color: #eff6ff; /* Light blue */
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-background-radius: 8px;
+}
+
+.icon-text-blue {
+    -fx-text-fill: #2563eb; /* Blue 600 */
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+/* Toggle Group Style */
+.toggle-group {
+    -fx-background-color: #f1f5f9;
+    -fx-padding: 2px;
+    -fx-background-radius: 6px;
+}
+
+.btn-toggle-left {
+    -fx-background-color: transparent;
+    -fx-background-radius: 4px 0 0 4px;
+}
+
+.btn-toggle-right {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0 4px 4px 0;
+}
+
+.btn-toggle-left.active, .btn-toggle-right.active {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 2, 0, 0, 1);
+}

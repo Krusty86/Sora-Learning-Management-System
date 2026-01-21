@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainContent" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminInstructorController">
+   <left>
+      <VBox style="-fx-background-color: linear-gradient(from 0% 0% to 0% 100%, #62c1e5 0%, #62c1e5 60%, #ffffff 100%);" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="750.0" prefWidth="200.0" style="-fx-background-color: #4FBBE3;" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="160.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Icons/graduation-hat_1.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets left="50.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <Label alignment="CENTER" prefHeight="74.0" prefWidth="200.0" text="SoraLMS" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Bold Italic" size="34.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/navs/apps.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_home1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleHome" prefHeight="70.0" prefWidth="90.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Home" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/online-learning%20(1).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_course1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleCourse" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Courses" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/reading-book_1.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_student1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleStudent" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Students" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="active-nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/teacher%20(2).png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_instructor1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_instructor" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Instructors" textFill="#4fbbe3">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/desktop.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_account1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_account" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent; -fx-scale-x: 1.1; -fx-scale-y: 1.1;" text="Accounts" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/score.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_grade1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_grade" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Grades" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="422.0" prefHeight="50.0" prefWidth="200.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                           <image>
+                              <Image url="@../images/Icons/schedule.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btn_shedule1" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handle_schedule" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Schedule" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Regular" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="50.0" prefWidth="100.0" styleClass="nav-item">
+                     <children>
+                        <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Icons/navs/logout1.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Button fx:id="btn_logOut" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#handleLogOut" prefHeight="50.0" prefWidth="143.0" style="-fx-border-color: transparent; -fx-background-color: transparent;" text="Logout" textFill="WHITE">
+                           <font>
+                              <Font name="SansSerif Bold" size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" top="120.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" style="-fx-background-color: white;" stylesheets="@../application/application.css" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" prefHeight="750.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="1.0" prefWidth="700.0" text="Instructor Management" textAlignment="CENTER" textFill="#2c7a9b">
+                     <font>
+                        <Font name="SansSerif Bold" size="29.0" />
+                     </font>
+                  </Label>
+                  <Separator prefHeight="20.0" prefWidth="200.0">
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding></Separator>
+                  <HBox prefHeight="2.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="30.0" text="/Manage Instructors" textFill="#8e8e8e">
+                           <font>
+                              <Font name="SansSerif Regular" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="18.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Button fx:id="viewAllInstructors" mnemonicParsing="false" onAction="#handleViewAll" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: #20a7db; -fx-border-color: #20a7db; -fx-border-width: 2;" text="View All Instructors" textAlignment="CENTER" textFill="WHITE" HBox.hgrow="ALWAYS">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="assignCourse" mnemonicParsing="false" onAction="#handleAssign" prefHeight="40.0" prefWidth="220.0" style="-fx-background-color: white; -fx-border-color: #20a7db; -fx-border-width: 2;" text="Assign Courses" textAlignment="CENTER" textFill="#20a7db" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="SansSerif Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="75.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Separator prefWidth="200.0">
+                     <padding>
+                        <Insets left="20.0" right="20.0" />
+                     </padding></Separator>
+                  <HBox prefHeight="586.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <StackPane HBox.hgrow="ALWAYS">
+                           <children>
+                              <AnchorPane fx:id="anc_assign" layoutX="10.0" layoutY="10.0" prefHeight="562.0" style="-fx-background-color: white;">
+                                 <children>
+                                    <VBox alignment="CENTER" layoutX="10.0" layoutY="0.8" prefHeight="594.0" prefWidth="700.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="35.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                             <padding>
+                                                <Insets left="25.0" />
+                                             </padding>
+                                             <children>
+                                                <TextField fx:id="txt_searchAssign" prefHeight="30.0" prefWidth="300.0" promptText="Search" style="-fx-border-color: #20a7db; -fx-background-color: white;">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="btn_searchAssign" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #20a7db; -fx-border-width: 2;" text="Search" textFill="WHITE">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="537.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox prefWidth="650.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="10.0" top="10.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <TableView fx:id="tbl_AssignCourse" onMouseClicked="#showDataAssign" styleClass="table" stylesheets="@../application/application.css" VBox.vgrow="ALWAYS">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_count1" prefWidth="30.0" text="No" />
+                                                            <TableColumn fx:id="col_instName" prefWidth="164.80004501342773" text="Name" />
+                                                            <TableColumn fx:id="col_course1" prefWidth="127.20002746582031" text="Course A" />
+                                                            <TableColumn fx:id="col_course2" prefWidth="155.99993896484375" text="Course B" />
+                                                            <TableColumn fx:id="col_course3" minWidth="1.60003662109375" prefWidth="120.0" text="Course C" />
+                                                         </columns>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                      <VBox alignment="CENTER" prefHeight="174.0" prefWidth="650.0" style="-fx-background-color: #DBEAFE; -fx-border-color: #3B82F6;" stylesheets="@../application/application.css" VBox.vgrow="ALWAYS">
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <VBox alignment="CENTER" prefHeight="159.0" prefWidth="332.0" stylesheets="@../application/application.css">
+                                                               <padding>
+                                                                  <Insets left="10.0" right="10.0" top="10.0" />
+                                                               </padding>
+                                                               <children>
+                                                                  <Label text="Instructor Detail" textAlignment="CENTER" textFill="#2099ea">
+                                                                     <font>
+                                                                        <Font name="SansSerif Bold" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <HBox alignment="CENTER" prefHeight="134.0" prefWidth="311.0" VBox.vgrow="ALWAYS">
+                                                                     <children>
+                                                                        <VBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
+                                                                           <children>
+                                                                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Name" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <ComboBox fx:id="cbl_name" prefWidth="150.0" promptText="Name" />
+                                                                                 </children>
+                                                                                 <VBox.margin>
+                                                                                    <Insets top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Course A" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <ComboBox fx:id="cbl_courseA" prefWidth="150.0" promptText="Course A" />
+                                                                                 </children>
+                                                                                 <VBox.margin>
+                                                                                    <Insets bottom="5.0" top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="71.0" prefHeight="25.0" prefWidth="200.0" />
+                                                                           </children>
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER" prefHeight="100.0" prefWidth="250.0" HBox.hgrow="ALWAYS">
+                                                                           <children>
+                                                                              <HBox prefHeight="25.0" prefWidth="250.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Course B" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <ComboBox fx:id="cbl_courseB" prefWidth="150.0" promptText="Course B" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <VBox.margin>
+                                                                                    <Insets top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Course C" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <ComboBox fx:id="cbl_courseC" prefWidth="150.0" promptText="Course C" />
+                                                                                 </children>
+                                                                                 <VBox.margin>
+                                                                                    <Insets bottom="5.0" top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="71.0" prefHeight="25.0" prefWidth="200.0" />
+                                                                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Button fx:id="btn_create1" mnemonicParsing="false" onAction="#handleCreateAssign" prefWidth="60.0" styleClass="btn-create" stylesheets="@../application/application.css" text="Create">
+                                                                                       <HBox.margin>
+                                                                                          <Insets right="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Button>
+                                                                                    <Button fx:id="btn_update1" mnemonicParsing="false" onAction="#handleUpdateAssign" prefWidth="60.0" styleClass="btn" text="Update">
+                                                                                       <HBox.margin>
+                                                                                          <Insets right="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Button>
+                                                                                    <Button fx:id="btn_delete1" mnemonicParsing="false" onAction="#handleDeleteAssign" prefWidth="60.0" styleClass="btn-delete" text="Delete">
+                                                                                       <HBox.margin>
+                                                                                          <Insets right="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Button>
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets top="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                           </children>
+                                                                           <HBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </HBox.margin>
+                                                                        </VBox>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="anc_viewAll" style="-fx-background-color: white;" StackPane.alignment="TOP_CENTER">
+                                 <children>
+                                    <VBox layoutX="10.0" layoutY="10.0" prefHeight="566.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="35.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                             <padding>
+                                                <Insets left="25.0" />
+                                             </padding>
+                                             <children>
+                                                <TextField fx:id="txt_search" prefHeight="30.0" prefWidth="300.0" promptText="Search" style="-fx-border-color: #20a7db; -fx-background-color: white;">
+                                                   <padding>
+                                                      <Insets left="10.0" />
+                                                   </padding>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Button fx:id="btn_search" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: #20a7db; -fx-border-width: 2;" text="Search" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="537.0" prefWidth="700.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <VBox prefWidth="650.0" style="-fx-background-color: transparent;" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" right="20.0" top="10.0" />
+                                                   </HBox.margin>
+                                                   <children>
+                                                      <TableView fx:id="tbl_instructor" onMouseClicked="#showData" prefHeight="335.0" prefWidth="660.0" styleClass="table" stylesheets="@../application/application.css" VBox.vgrow="ALWAYS">
+                                                         <columns>
+                                                            <TableColumn fx:id="col_count" prefWidth="30.0" text="No" />
+                                                            <TableColumn fx:id="col_name" prefWidth="131.19995498657227" text="Name" />
+                                                            <TableColumn fx:id="col_address" prefWidth="132.0000457763672" text="NRC" />
+                                                            <TableColumn fx:id="col_email" prefWidth="141.60003662109375" text="Email" />
+                                                            <TableColumn fx:id="col_phone" minWidth="1.60003662109375" prefWidth="92.00003051757812" text="Phone" />
+                                                            <TableColumn fx:id="col_dob" prefWidth="109.5999755859375" text="DoB" />
+                                                         </columns>
+                                                         <VBox.margin>
+                                                            <Insets />
+                                                         </VBox.margin>
+                                                         <columnResizePolicy>
+                                                            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                         </columnResizePolicy>
+                                                      </TableView>
+                                                      <VBox prefHeight="173.0" prefWidth="660.0" style="-fx-background-color: #DBEAFE; -fx-border-color: #3B82F6;" stylesheets="@../application/application.css" VBox.vgrow="ALWAYS">
+                                                         <padding>
+                                                            <Insets bottom="5.0" left="10.0" right="10.0" top="10.0" />
+                                                         </padding>
+                                                         <children>
+                                                            <VBox alignment="CENTER" prefHeight="159.0" prefWidth="332.0" stylesheets="@../application/application.css" VBox.vgrow="ALWAYS">
+                                                               <padding>
+                                                                  <Insets left="10.0" right="10.0" top="10.0" />
+                                                               </padding>
+                                                               <children>
+                                                                  <Label text="Instructor Detail" textAlignment="CENTER" textFill="#2099ea">
+                                                                     <font>
+                                                                        <Font name="SansSerif Bold" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <HBox alignment="CENTER" prefHeight="134.0" prefWidth="311.0" VBox.vgrow="ALWAYS">
+                                                                     <children>
+                                                                        <VBox prefHeight="100.0" prefWidth="250.0">
+                                                                           <children>
+                                                                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Name" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txt_name" promptText="Name" />
+                                                                                 </children>
+                                                                                 <VBox.margin>
+                                                                                    <Insets />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="DoB" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txt_dob" promptText="Date of Birth" />
+                                                                                 </children>
+                                                                                 <VBox.margin>
+                                                                                    <Insets bottom="5.0" top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="71.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Phone" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txt_phone" promptText="Phone" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                           </children>
+                                                                        </VBox>
+                                                                        <VBox prefHeight="100.0" prefWidth="250.0">
+                                                                           <children>
+                                                                              <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="250.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Email" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txt_email" promptText="Email" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="40.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="Address" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txt_address" promptText="Address" />
+                                                                                 </children>
+                                                                                 <VBox.margin>
+                                                                                    <Insets bottom="5.0" top="5.0" />
+                                                                                 </VBox.margin>
+                                                                              </HBox>
+                                                                              <HBox layoutX="10.0" layoutY="71.0" prefHeight="25.0" prefWidth="200.0" />
+                                                                              <HBox layoutX="10.0" layoutY="45.0" prefHeight="25.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Label prefHeight="26.0" prefWidth="120.0" text="NRC" textAlignment="CENTER">
+                                                                                       <font>
+                                                                                          <Font name="SansSerif Bold" size="14.0" />
+                                                                                       </font>
+                                                                                    </Label>
+                                                                                    <TextField fx:id="txt_nrc" promptText="NRC" />
+                                                                                 </children>
+                                                                              </HBox>
+                                                                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <Button fx:id="btn_create" mnemonicParsing="false" onAction="#handleCreate" prefWidth="60.0" styleClass="btn-create" stylesheets="@../application/application.css" text="Create">
+                                                                                       <HBox.margin>
+                                                                                          <Insets right="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Button>
+                                                                                    <Button fx:id="btn_update" mnemonicParsing="false" onAction="#handleUpdate" prefWidth="60.0" styleClass="btn" text="Update">
+                                                                                       <HBox.margin>
+                                                                                          <Insets right="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Button>
+                                                                                    <Button fx:id="btn_delete" mnemonicParsing="false" onAction="#handleDelete" prefWidth="60.0" styleClass="btn-delete" text="Delete">
+                                                                                       <HBox.margin>
+                                                                                          <Insets right="5.0" />
+                                                                                       </HBox.margin>
+                                                                                    </Button>
+                                                                                 </children>
+                                                                                 <padding>
+                                                                                    <Insets top="10.0" />
+                                                                                 </padding>
+                                                                              </HBox>
+                                                                           </children>
+                                                                           <HBox.margin>
+                                                                              <Insets left="10.0" />
+                                                                           </HBox.margin>
+                                                                        </VBox>
+                                                                     </children>
+                                                                     <padding>
+                                                                        <Insets left="5.0" right="5.0" top="5.0" />
+                                                                     </padding>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets bottom="10.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </StackPane.margin>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

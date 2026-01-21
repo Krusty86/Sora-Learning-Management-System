@@ -1,0 +1,161 @@
+/* Root & Background */
+.root {
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.main-bg {
+    -fx-background-color: #F9FAFB;
+}
+
+/* Header & Typography */
+.header-area {
+    -fx-background-color: white;
+    -fx-border-color: #E5E7EB;
+    -fx-border-width: 0 0 1 0;
+}
+
+.title-text {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C7A9B;
+}
+
+.subtitle-text {
+    -fx-text-fill: #6B7280;
+    -fx-font-size: 14px;
+}
+
+.section-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4B5563;
+}
+
+/* Stat Cards */
+.stat-card-1 {
+    -fx-background-color: linear-gradient(to bottom right, #4FBBE3, #2C7A9B);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.stat-card-2 {
+    -fx-background-color: linear-gradient(to bottom right, #62c1e5, #4FBBE3);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.stat-card-3 {
+    -fx-background-color: linear-gradient(to bottom right, #2C7A9B, #1a5a7a);
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);
+}
+
+.card-title {
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+    -fx-font-size: 13px;
+}
+
+.card-count {
+    -fx-text-fill: white;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+}
+
+/* Notices & Containers - Adding the shadow and cleaner border */
+.content-box {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-border-color: #F3F4F6;
+    -fx-border-radius: 15;
+    /* Adding a subtle shadow to match the image */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 4);
+}
+
+.notice-item {
+    -fx-background-color: #F9FAFB;
+    -fx-background-radius: 10; /* Slightly more rounded */
+    -fx-border-color: transparent transparent transparent #4FBBE3;
+    -fx-border-width: 0 0 0 4;
+    -fx-padding: 15; /* Ensure internal spacing for the text */
+}
+
+.notice-item:hover {
+    -fx-background-color: #F1F5F9; /* Lighter grey-blue hover */
+}
+
+/* TabPane Styling - Forcing White Backgrounds */
+.tab-pane {
+    -fx-background-color: white;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 0;
+    -fx-background-color: transparent;
+}
+
+/* This hides the default grey background behind the tabs */
+.tab-pane .tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 8 15 8 15;
+    -fx-cursor: hand;
+}
+
+.tab-pane .tab:selected {
+    /* Teal underline from your React theme */
+    -fx-border-color: transparent transparent #2C7A9B transparent;
+    -fx-border-width: 0 0 2 0;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #6B7280; /* Muted grey for inactive */
+    -fx-font-size: 14px;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #2C7A9B; /* Teal for active */
+    -fx-font-weight: bold;
+}
+
+/* Removes the focus ring (orange or blue outline) when clicking */
+.tab-pane .tab:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+/* Styling the bar container */
+.progress-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.2); /* Faint white background */
+    -fx-background-radius: 10;
+    -fx-padding: 2;
+}
+
+/* Styling the actual moving "progress" part */
+.progress-bar > .bar {
+    -fx-background-color: white; /* Bright white bar */
+    -fx-background-radius: 10;
+    -fx-background-insets: 0;
+}
+
+/* Remove the striped animation if you want a clean look */
+.progress-bar > .track {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab .tab-label {
+    -fx-text-fill: #6B7280;
+}
+
+.tab-pane .tab:selected .tab-label {
+    -fx-text-fill: #2C7A9B;
+    -fx-font-weight: bold;
+}
+.calendar-day:hover {
+    -fx-background-color: #F3F4F6;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}

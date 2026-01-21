@@ -1,0 +1,179 @@
+/* Color Palette: White & Soft Blue */
+.root {
+    -fx-background-color: #F8FAFC; /* Very light gray/blue background */
+    -fx-font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    -fx-background-color: white;
+    -fx-border-color: #E2E8F0;
+    -fx-border-width: 0 1 0 0;
+}
+
+.sidebar-logo {
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.nav-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #64748B;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 15;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.nav-btn:hover {
+    -fx-background-color: #F1F5F9;
+    -fx-text-fill: #2563EB;
+}
+
+.nav-btn-active {
+    -fx-background-color: #EFF6FF; /* Soft Blue background */
+    -fx-text-fill: #2563EB; /* Bright Blue text */
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 15;
+    -fx-background-radius: 8;
+    -fx-font-weight: bold;
+}
+
+/* Header Text */
+.header-title {
+    -fx-text-fill: #0F172A;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.header-subtitle {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 14px;
+}
+
+/* Profile Banner Card */
+.profile-card {
+    -fx-background-color: white;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 10, 0, 0, 5);
+}
+
+.profile-name {
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+}
+
+.profile-title {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 15px;
+}
+
+/* Stat Cards */
+.stat-card {
+    -fx-background-color: white;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 18;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 8, 0, 0, 4);
+}
+
+.stat-label {
+    -fx-text-fill: #64748B;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+.stat-value {
+    -fx-text-fill: #1E293B;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.stat-value-large {
+    -fx-text-fill: #2563EB; /* Highlighted Blue */
+    -fx-font-size: 28px;
+    -fx-font-weight: 900;
+}
+
+/* Avatar Styling */
+.avatar-circle {
+    -fx-background-color: #2563EB;
+    -fx-background-radius: 50;
+    -fx-min-width: 45;
+    -fx-min-height: 45;
+}
+
+.avatar-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.profile-image-box {
+    -fx-background-color: #DBEAFE;
+    -fx-background-radius: 10;
+    -fx-min-width: 80;
+    -fx-min-height: 80;
+}
+
+.profile-image-text {
+    -fx-text-fill: #2563EB;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #E2E8F0;
+    -fx-border-radius: 8;
+    -fx-padding: 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: #F8FAFC;
+    -fx-border-color: transparent transparent #E2E8F0 transparent;
+	-fx-padding: 10 0 10 0;
+	-fx-font-size: 18;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #475569;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FFFFFF;
+}
+
+.table-row-cell:even {
+    -fx-background-color: #FBFDFF;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #F1F5F9;
+}
+.table-row-cell{
+	-fx-padding: 10 0 10 0;
+	-fx-font-size: 18;
+	-fx-border-color: transparent;
+}
+
+/* ScrollPane */
+.content-scroll {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+}
+
+.content-scroll .viewport {
+    -fx-background-color: transparent;
+}

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="controllers.InstructorInfoController" prefHeight="800.0" prefWidth="1200.0"
+            stylesheets="@instructor-info.css" styleClass="main-container">
+    
+    <left>
+        <VBox styleClass="sidebar" prefWidth="250.0" spacing="10">
+            <padding><Insets top="20" right="15" bottom="20" left="15"/></padding>
+            <Label text="EduDash" styleClass="sidebar-logo"/>
+            <Region prefHeight="30"/>
+            <Button text="Dashboard" styleClass="nav-btn-active" maxWidth="Infinity"/>
+            <Button text="Courses" styleClass="nav-btn" maxWidth="Infinity"/>
+            <Button text="Students" styleClass="nav-btn" maxWidth="Infinity"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button text="Settings" styleClass="nav-btn" maxWidth="Infinity"/>
+            <Button text="Logout" styleClass="nav-btn" maxWidth="Infinity"/>
+        </VBox>
+    </left>
+
+    <center>
+        <VBox spacing="20">
+            <padding><Insets top="20" right="30" bottom="20" left="30"/></padding>
+            
+            <HBox alignment="CENTER_LEFT">
+                <VBox>
+                    <Label text="Instructor Profile" styleClass="header-title"/>
+                    <Label text="View your profile and current courses" styleClass="header-subtitle"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <StackPane styleClass="avatar-circle">
+                    <Label text="SJ" styleClass="avatar-text"/>
+                </StackPane>
+            </HBox>
+
+            <ScrollPane fitToWidth="true" styleClass="content-scroll">
+                <VBox spacing="25">
+                    <HBox styleClass="profile-card" spacing="20" alignment="CENTER_LEFT">
+                        <StackPane styleClass="profile-image-box">
+                            <Label text="SJ" styleClass="profile-image-text"/>
+                        </StackPane>
+                        <VBox alignment="CENTER_LEFT">
+                            <Label text="Dr. Sarah Johnson" styleClass="profile-name"/>
+                            <Label text="Associate Professor of Computer Science" styleClass="profile-title"/>
+                        </VBox>
+                    </HBox>
+
+                    <GridPane hgap="15" vgap="15">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="25"/>
+                            <ColumnConstraints percentWidth="25"/>
+                            <ColumnConstraints percentWidth="25"/>
+                            <ColumnConstraints percentWidth="25"/>
+                        </columnConstraints>
+                        
+                        <VBox GridPane.columnIndex="0" styleClass="stat-card">
+                            <Label text="Email" styleClass="stat-label"/>
+                            <Label text="sarah.johnson@uni.edu" styleClass="stat-value-small"/>
+                        </VBox>
+                        <VBox GridPane.columnIndex="1" styleClass="stat-card">
+                            <Label text="Phone" styleClass="stat-label"/>
+                            <Label text="+1 (555) 123-4567" styleClass="stat-value"/>
+                        </VBox>
+                        <VBox GridPane.columnIndex="2" styleClass="stat-card">
+                            <Label text="Office" styleClass="stat-label"/>
+                            <Label text="Room 215" styleClass="stat-value"/>
+                        </VBox>
+                        <VBox GridPane.columnIndex="3" styleClass="stat-card">
+                            <Label text="Total Students" styleClass="stat-label"/>
+                            <Label text="114" styleClass="stat-value-large"/>
+                        </VBox>
+                    </GridPane>
+
+                    <HBox spacing="20">
+                        <VBox styleClass="section-container" HBox.hgrow="ALWAYS">
+                            <Label text="Current Courses" styleClass="section-title"/>
+                            <TableView fx:id="tbl_courses" prefHeight="300">
+                                <columns>
+                                    <TableColumn text="Course Name" fx:id="col_courseName" prefWidth="250"/>
+                                    <TableColumn text="Code" fx:id="col_code" prefWidth="100"/>
+                                    <TableColumn text="Students" fx:id="col_studentCount" prefWidth="100"/>
+                                </columns>
+                            </TableView>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </ScrollPane>
+        </VBox>
+    </center>
+</BorderPane>
